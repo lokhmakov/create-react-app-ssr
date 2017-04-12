@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-polyfill": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -64,9 +63,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "start:server": "NODE_ENV=development nodemon server",
+    "start:ssr": "node build/server.js",
     "build": "node scripts/build.js",
     "build:lib": "babel src/node_modules --out-dir lib --copy-files",
-    "build:server": "babel-node scripts/buildServer.js",
+    "build:server": "node scripts/buildServer.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
